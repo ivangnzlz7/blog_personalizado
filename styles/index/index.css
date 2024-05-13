@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Madurai", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.5rem;
+    top: 0;
+    position: sticky;
+    background-color: rgb(62, 59, 252);
+}
+
+.logo {
+    padding: 20px 20px 20px 40px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    cursor: text;
+}
+
+
+
+.createBlog {
+    display: flex;
+    flex-direction: row;
+}
+
+.createBlog div {
+    background-color: rgb(13, 90, 100);
+    border: 2px transparent;
+    border-radius: 6px;
+}
+
+.createBlog a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+.createBlog a:hover {
+    color: rgb(180, 181, 252);
+    transform: scale(1.04);
+}
+
+.blog {
+    text-align: center;
+    color: black;
+    padding-top: 80px;
+}
+
+.blog h3 span {
+    color: rgb(46, 46, 248);
+}
+
+.blog h1 { 
+    font-size: 46px;
+}
+
+.blog h3 {
+    font-size: 26px;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.desing div:first {
+    padding-top: 100px;
+}
+
+#shop,
+#style, 
+#dinero,
+#mapa,
+#security {
+    width: 40vw;
+    height: 50vh;
+}
+
+.desing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3vw;
+}
+
+.flexible {
+    padding-top: 320px;
+}
+
+.desing div:first-child {
+    text-align: start;
+}
+
+.desing div:first-child h2 { 
+    font-size: 3rem;
+}
+
+.desing div:first-child p {
+    width: 46vw;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    padding-bottom: 80px;
+
+}
+
+.desing div h2 span {
+    color: rgb(74, 190, 126);
+}
+
+.money {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    column-gap: 6vw;
+}
+
+.marketing {
+    padding-top: 320px;
+}
+
+.money div h2 {
+    font-size: 3rem;
+}
+
+.money div p {
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    width: 400px;
+}
+
+.money div h2 span {
+    color: rgb(13, 163, 13);
+}
+
+.audiencia {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.audiencia div:first-child h2 {
+    padding-top: 100px;
+    font-size: 3rem;
+}
+
+.audiencia div:first-child p {
+    width: 500px;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.mapa {
+    padding-top: 320px;
+}
+
+.audiencia div h2 span {
+    color: rgb(43, 41, 41);
+}
+
+
+.seguridad {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4vw;
+}
+
+.memories {
+    padding-top: 300px;
+}
+
+
+.seguridad div h2 {
+    padding-top: 100px;
+    font-size: 3rem;
+}
+
+.seguridad div p {
+    width: 500px;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.blogueros {
+    display: flex;
+    flex-direction: column;
+}
+
+.blogueros div {
+    text-align: center;
+}
+
+.blogueros div h2{
+    padding-top: 400px;
+    font-size: 3rem;
+}
+
+.blogueros div p{
+    width: 500px;
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+    margin: 10px auto;
+}
+
+.sumate {
+    background-image: url('./img/mapaMundo2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+} 
+
+.btn {
+    width: 130px;
+    height: 50px;
+    background-color: rgb(75, 73, 73);
+    cursor: pointer;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    outline: 1px solid rgb(100, 99, 99);
+    transition: background-color 0.4s ease; outline: 0.4s ease;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    background-color: rgb(110, 105, 105);
+    color: rgb(163, 167, 167);
+    outline: 1px solid rgb(78, 78, 78);
+}
+
+/* Footer */ 
+
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(62, 59, 252);
+}
+
+.informacion {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding-top: 120px;
+}
+
+.informacion section {
+    display: inherit;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.informacion section a {
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
