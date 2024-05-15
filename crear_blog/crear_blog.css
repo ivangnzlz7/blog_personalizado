@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hind Madurai", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.5rem;
+    top: 0;
+    position: sticky;
+    background-color: rgb(62, 59, 252);
+}
+
+.logo {
+    padding: 20px 20px 20px 40px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+
+
+.createBlog {
+    display: flex;
+    flex-direction: row;
+}
+
+.createBlog div {
+    background-color: rgb(13, 90, 100);
+    border: 2px transparent;
+    border-radius: 6px;
+}
+
+.createBlog a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.4s ease;
+}
+
+.createBlog a:hover {
+    color: rgb(180, 181, 252);
+    transform: scale(1.04);
+}
+
+main {
+    margin: 42px auto;
+    background-color: white;
+    width: 320px;
+    border: 1px solid rgb(241, 241, 190);
+    border-radius: 6px;
+    box-shadow: 4px 4px 10px  rgba(201, 193, 193, 0.897), -4px -4px 10px  rgba(201, 193, 193, 0.897);
+}
+
+
+form section {
+    padding: 16px 0;
+}
+
+section input,
+#temablog {
+    width: 100%;
+    height: 1.8rem;
+    border-top: 2px solid rgb(187, 187, 187);
+    border-bottom: 2px solid  rgb(187, 187, 187);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-radius: 6px;
+    background-color: white;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+input:focus {
+    box-shadow: 0 2px 6px  rgba(78, 78, 78, 0.897), 0 -2px 6px  rgba(78, 78, 78, 0.897);
+    outline: none;
+}
+
+#temablog:focus {
+    box-shadow: 0 2px 6px  rgba(78, 78, 78, 0.897), 0 -2px 6px  rgba(78, 78, 78, 0.897);
+    outline: none;
+}
+
+#submit {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#submit:hover {
+    box-shadow: 0 2px 6px  rgba(60, 70, 219, 0.897), 0 -2px 6px rgba(60, 70, 219, 0.897);
+    outline: none;
+}
+
+
+form div:last-child {
+    padding: 0 0 6px 10px;
+}
+
+.term {
+    padding: 10px 0 0 8px;
+}
+
+section label {
+    padding-left: 6px;
+}
+
+label span {
+    transition: color 0.6s ease, border-color 0.6s ease-in-out, border-bottom-style 0.6s ease-in-out;
+}
+
+label span:hover {
+   color: rgb(104, 103, 103);
+   border-bottom-style: solid;
+   border-color: rgb(163, 160, 160);
+   cursor: pointer;
+}
+
+section label {
+    font-size: 1.2rem;
+}
+
+
+/* mostrar error*/
+
+.error {
+    padding: 22px 0;
+}
+
+

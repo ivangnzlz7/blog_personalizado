@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./crear_blog.css">
+    <title>Haz tu blog personalizado y divertido</title>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../index.html">Blog</a>
+        </div>
+        <div class="createBlog">
+            <a href="#">Iniciar Sesion</a>
+            <a href="crear_blog.html">Crea tu blog</a>
+        </div>
+    </header>
+    <section id="avisos">
+
+    </section>
+    <main class="main">
+        <form action="#" id="form" method="post">
+            <section>
+                <label for="usuario">Nombre de Usuario</label>
+                <br>
+                <br>
+                <input type="text" name="usuario" id="usuario" placeholder="    Usuario">
+            </section>
+            <section>
+                <label for="temablog">Tematica del blog</label>
+                <br>
+                <br>
+                <select name="temablog" id="temablog">
+                    <option disabled selected value="">Tematica</option>
+                    <option value="VA">Viajes y Aventuras</option>
+                    <option value="CR">Cocina y Recetas</option>
+                    <option value="TG">Tecnología y Gadgets</option>
+                    <option value="MV">Moda y Estilo de Vida</option>
+                    <option value="SB">Salud y Bienestar</option>
+                    <option value="LE">Literatura y Escritura</option>
+                    <option value="CE">Cine y Entretenimiento</option>
+                    <option value="AF">Arte y Fotografía</option>
+                    <option value="EA">Educación y Aprendizaje</option>
+                    <option value="DM">Desarrollo Personal y Motivación</option>
+                </select>
+            </section>
+            <section>
+                <label for="email">Email</label>
+                <br>
+                <br>
+                <input type="text" name="email" id="email" placeholder="    Email">
+            </section>
+            <section>
+                <label for="password">Password</label>
+                <br>
+                <br>
+                <input type="password" name="password" id="password" placeholder="    Password">
+            </section>
+            <section>
+                <label for="repassword">Repetir Password</label>
+                <br>
+                <br>
+                <input type="password" name="repassword" id="repassword" placeholder="    Password">
+            </section>
+                <div class="term">
+                    <input type="checkbox" id="terminos" name="terminos" checked required>
+                    <label for="terminos">Acepto los <span>Terminos y Condiciones</span></label>
+                </div>
+                <br>
+                <div>
+                    <input type="image" src="../img/submit.png" alt="Submit" id="submit" width="120" height="32">
+                </div>
+        </form>
+    </main>
+
+    <script src="./crear_blog.js"></script>
+    
+</body>
+</html>
