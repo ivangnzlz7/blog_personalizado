@@ -1,6 +1,11 @@
 const submit = document.querySelector('#submit');
 const formulario = document.querySelector('#form');
 const avisos = document.querySelector('#avisos');
+let nom = document.querySelector('#usuario');
+let tema = document.querySelector('#temablog');
+let ema = document.querySelector('#email');
+let pass = document.querySelector('#password');
+let repass = document.querySelector('#repassword');
 
 window.addEventListener('load', () => {
     formulario.addEventListener('submit', check);
@@ -20,28 +25,54 @@ function check(e){
 
     // Validar Campos
     if([nombreUser, tematica, email, password, repassword].includes("")){
+        let inputs = [nom, tema, ema, pass, repass]
+
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].classList.add('errorEnCampos')
+        }
+        console.log(tema);
         aviso('Completar todos los campos', false);
         return;
+    } else {
+        let inputs = [nom, tema, ema, pass, repass]
+
+        for (let i = 0; i < inputs.length; i++) {
+            inputs[i].classList.remove('errorEnCampos');
+        }
     }
 
     if(nombreUser.length <= 7 && nombreUser.length > 30){
+        nom.classList.add('errorEnCampos')
         aviso('minimo 8 y maximo 30 caracteres', false);
         return;
+    } else {
+        nom.classList.remove('errorEnCampos')
     }
 
     if(matchM === null || matchm2 === null){ 
-        aviso('correo invalido', false)
+        ema.classList.add('errorEnCampos');
+        aviso('correo invalido', false);
         return;
+    } else {
+        ema.classList.remove('errorEnCampos');
     }
 
     if(password.length <= 7){
+        pass.classList.add('errorEnCampos')
         aviso('minimo 8 caracteres', false)
         return;
+    } else {
+        pass.classList.remove('errorEnCampos')
     }
 
     if(password != repassword){
+        pass.classList.add('errorEnCampos');
+        repass.classList.add('errorEnCampos');
         aviso('No coinciden las contraseñas', false)
         return;
+    } else {
+        pass.classList.remove('errorEnCampos');
+        repass.classList.remove('errorEnCampos');
     }
 
     // Guardar Su Informacion
