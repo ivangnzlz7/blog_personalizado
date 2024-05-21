@@ -30,7 +30,6 @@ function check(e){
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].classList.add('errorEnCampos')
         }
-        console.log(tema);
         aviso('Completar todos los campos', false);
         return;
     } else {
@@ -83,24 +82,30 @@ function check(e){
     }
     
     // Buscar Si Existe El Usuario
-    let usuarioExistente = JSON.parse(localStorage.getItem('Usuario'));
+    let usuarioExistente = JSON.parse(localStorage.getItem(nombreUser));
+
+    // Si El Usuario No Existe
+    if(usuarioExistente === null){
+        //Crear Usuario
+        localStorage.setItem(nombreUser, JSON.stringify(usuario));
+
+        aviso('Se Registro Exitosamente', true);
+        return;
+    }
 
 
     // Evitar Duplicas
-    if(usuarioExistente.user == usuario.user){
+    if(usuarioExistente.user == usuario.user || usuarioExistente.user == null){
         aviso('Ya existe ese usuario', false)
         return;
     }
 
-    if(usuarioExistente.email == usuario.email){
+    if(usuarioExistente.email == usuario.email || usuarioExistente.email == null){
         aviso('Ya existe el email en el registro', false)
         return;
-    }
+    } 
 
-    //Crear Usuario
-    localStorage.setItem('Usuario', JSON.stringify(usuario));
 
-    aviso('Se Registro Exitosamente', true);
 }
 
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="icon" href="../img/mention-56.svg" type="image/icon">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">Blog</a>
+        </div>
+
+        <div class="createBlog">
+            <a href="#">Iniciar Sesion</a>
+            <a href="../registrar_blog/registrar_blog.html">Registrarse</a>
+        </div>
+    </header>                                                          
+      <div class="login-container">
+        
+        <form action="#" class="form" id="formulario">
+            <h2>Iniciar sesión</h2>
+
+            <div class="nombre-usuario form-error">
+                <label for="username">Nombre de usuario</label>
+                 <input type="text" class="campos" id="username" name="usuario" placeholder="Nombre de usuario" maxlength="16" required>
+            </div>
+                
+            <div class="contrasenia form-succes">
+                <label for="pass">Contraseña</label>
+                <input type="password" class="campos" id="pass" name="contra" placeholder="Contraseña" minlength="8" maxlength="20" required>
+                <i class="bx bx-hide"></i>
+            </div>
+            
+            <div class="check">
+                <label for="recordar">Recordar contraseña</label>
+                <input type="checkbox" id="recordar">
+            </div>
+              
+            <div class="div-boton">
+                <input class="boton" type="button" id="boton" value=" Ingresar" onclick="ingresar()">
+            </div>
+
+            <a class="recuperar-contra" href="cambiar-contra.html">¿Olvidó su contraseña?</a>
+        </form>
+    </div>
+    
+    
+    <footer>
+        <div class="informacion">
+            <section>
+                <a href="#">Phone +11 4223-5315</a>
+                <a href="#">example@ds.com</a>
+            </section>
+            <section>
+                <a href="#">About</a>
+                <a href="#">jobs</a>
+                <a href="#">Press</a>
+                <a href="#">blog</a>
+            </section>
+            <section>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </section>
+            <section>
+                <a href="#">Facebook</a>
+                <a href="#">twitter</a>
+                <a href="#">instagram</a>
+            </section>
+        </div>
+    </footer>
+    <script src="login.js"></script>
+</body>
+</html>

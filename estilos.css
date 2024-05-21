@@ -14,6 +14,7 @@ header {
     top: 0;
     position: sticky;
     background-color: rgb(62, 59, 252);
+    z-index: 1000;
 }
 
 .logo {
@@ -282,6 +283,271 @@ footer {
     text-decoration: none;
 }
 
+/* galeria */
+
+.titulo-galeria {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+
+.titulo-galeria div:nth-child(1) {
+    width: 100%;
+    margin-right: 50px;
+}
+
+.titulo-galeria div:nth-child(2) {
+    width: 100%;
+    margin-right: 50px;
+}
+
+.titulo-galeria div p {
+    line-height: 2.5rem;
+    font-size: 1.6rem;
+}
+
+
+
+.titulo-galeria h2 {
+    font-size: 3rem;
+}
+
+.container-galeria {
+    display: grid;
+    box-shadow: 0px 0px 30px rgb(62, 59, 252);
+    border-radius: 20px;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "uno dos tres"
+        "cuatro cinco seis"
+    ;
+}
+
+.container-galeria a{
+    text-decoration: none;
+    color: black;
+}
+
+.container-galeria div img {
+    border-radius: 10px;
+    width: 100%;
+
+}
+
+.container-galeria div {
+    border: 2px solid skyblue;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.container-galeria div h3 {
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+
+
+.container-galeria div:hover {
+
+    border: 3px solid rgb(49, 204, 243);
+    transform: scale(1.05);
+
+}
+
+
+
+h3 {
+    text-align: center;
+
+}
+
+.plantilla-uno {
+    grid: uno;
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 2s;
+
+}
+
+.plantilla-dos {
+    grid: dos;
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 2.5s;
+}
+
+.plantilla-tres {
+    grid: tres;
+
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 3s;
+}
+
+.plantilla-cuatro {
+    grid: cuatro;
+
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 3.5s;
+}
+
+.plantilla-cinco {
+    grid: cinco;
+
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 4s;
+}
+
+.plantilla-seis {
+    grid: seis;
+
+    animation-name: giro;
+    animation-duration: 1.5s;
+    animation-iteration-count: initial;
+    animation-delay: 4.5s;
+}
+
+/* animacion galeria */
+
+@keyframes giro {
+    0% {
+
+        transform: translateY(-30px);
+    }
+
+    100% {
+        transform: translateY(0px);
+        ;
+    }
+}
+
+
+/* responsive */
+
+@media (max-width:1000px) {
+
+    /* responsive galeria */
+    .titulo-galeria {
+        width: 85%;
+    }
+
+    .container-galeria {
+        width: 85%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "uno dos"
+            "tres cuatro"
+            "cinco seis"
+        ;
+    }
+
+
+}
+
+@media (max-width:830px) {
+
+    /* responsive galeria */
+    .titulo-galeria {
+        width: 100%;
+    }
+
+    .container-galeria {
+        width: 95%;
+    }
+
+
+}
+
+@media (max-width:700px) {
+
+    /* responsive galeria */
+    .titulo-galeria {
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+    }
+
+    .titulo-galeria div:nth-child(1) {
+        width: 80%;
+
+    }
+
+    .titulo-galeria div:nth-child(2) {
+        width: 80%;
+
+    }
+
+
+
+}
+
+@media (max-width:600px) {
+
+    /* responsive galeria */
+    .titulo-galeria {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .titulo-galeria div:nth-child(1) {
+        width: 90%;
+
+    }
+
+    .titulo-galeria div:nth-child(2) {
+        width: 90%;
+
+    }
+
+    .container-galeria {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"
+            "seis"
+        ;
+    }
+}
+
+@media (max-width:500px) {
+
+    /* responsive footer */
+    .informacion {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: rgb(62, 59, 252);
+        align-items: center;
+        padding-top: 0px;
+    }
+
+    .informacion section {
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+}
 
 
 
