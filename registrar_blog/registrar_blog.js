@@ -84,6 +84,17 @@ function check(e){
     // Buscar Si Existe El Usuario
     let usuarioExistente = JSON.parse(localStorage.getItem(nombreUser));
 
+    // Evitar Duplicas
+    if(usuarioExistente.user == usuario.user){
+        aviso('Ya existe ese usuario', false)
+        return;
+    }
+    
+    if(usuarioExistente.email == usuario.email){
+        aviso('Ya existe el email en el registro', false)
+        return;
+    } 
+    
     // Si El Usuario No Existe
     if(usuarioExistente === null){
         //Crear Usuario
@@ -92,19 +103,6 @@ function check(e){
         aviso('Se Registro Exitosamente', true);
         return;
     }
-
-
-    // Evitar Duplicas
-    if(usuarioExistente.user == usuario.user){
-        aviso('Ya existe ese usuario', false)
-        return;
-    }
-
-    if(usuarioExistente.email == usuario.email){
-        aviso('Ya existe el email en el registro', false)
-        return;
-    } 
-
 
 }
 
