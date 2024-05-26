@@ -95,12 +95,12 @@ function check(e){
 
 
     // Evitar Duplicas
-    if(usuarioExistente.user == usuario.user || usuarioExistente.user == null){
+    if(usuarioExistente.user == usuario.user){
         aviso('Ya existe ese usuario', false)
         return;
     }
 
-    if(usuarioExistente.email == usuario.email || usuarioExistente.email == null){
+    if(usuarioExistente.email == usuario.email){
         aviso('Ya existe el email en el registro', false)
         return;
     } 
