@@ -62,9 +62,30 @@ header {
     padding-top: 80px;
 }
 
-.blog h3 span {
+section h3 span {
+    color:  rgb(62, 59, 252);
+}
+
+.blog .option {
+    width: 110px;
+    margin: 10px auto;
+    transition: transform 0.6s ease-in-out;
+}
+
+.blog .option span a {
+    text-decoration: none;
     color: rgb(46, 46, 248);
 }
+
+
+.blog .option:hover {
+    transform: scale(1.16);
+}
+
+.blog .option span a:hover {
+    color: rgb(110, 110, 236);
+}
+
 
 .blog h1 { 
     font-size: 46px;
@@ -283,6 +304,18 @@ footer {
     text-decoration: none;
 }
 
+/* Transform reload */
+.scroll-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+.scroll-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* galeria */
 
 .titulo-galeria {
@@ -361,7 +394,6 @@ footer {
     transform: scale(1.05);
 
 }
-
 
 
 h3 {

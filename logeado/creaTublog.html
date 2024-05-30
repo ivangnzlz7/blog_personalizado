@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header class=".scroll-element">
         <div class="logo">
             <a href="../index.html">Blog</a>
         </div>
@@ -27,42 +27,42 @@
     <!--se crea las secciones, para ingresar a las opciones predeterminadas,la clase blog se dio estilo con css, y las
         etiqeuas href redirigen a los html correspondientes-->
     <main>
-        <div class="blog">
+        <div class="blog scroll-element">
             <section>
                 <h1>Lo que te apasiona escribilo a tu manera</h1>
                 <br>
                 <h3>Crea un blog <span>original</span> y facilmente <span>atractivo</span></h3>
             </section>
         </div>
-        <div>
+        <div class="scroll-element">
             <section class="blog">
                 <img src="../img/opcion1.png" alt="1" height="300">
-                <a href="Opcion1.html">
-                    <h3><span>Opcion 1</span></h3>
-                </a>
+                <h3 class="option">
+                    <span><a href="Opcion1.html">Opcion 1</a></span>
+                </h3>
             </section>
         </div>
-        <div>
+        <div class="scroll-element">
             <section class="blog">
                 <img src="../img/opcion2.png" alt="2" height="300">
-                <a href="Opcion2.html">
-                    <h3><span>Opcion 2</span></h3>
-                </a>
+                <h3 class="option">
+                    <span><a href="Opcion2.html">Opcion 2</a></span>
+                </h3>
             </section>
         </div>
-        <div>
+        <div class="scroll-element">
             <section class="blog">
                 <img src="../img/opcion3.png" alt="3" height="300">
-                <a href="Opcion3.html">
-                    <h3><span>Opcion 3</span></h3>
-                </a>
+                <h3 class="option">
+                    <span><a href="Opcion3.html">Opcion 3</a></span>
+                </h3>
             </section>
         </div>
         <br>
     </main>
     <section class="main-galeria">
         <!-- imagen principal y titulo -->
-        <section class="titulo-galeria">
+        <section class="titulo-galeria scroll-element">
             <div>
                 <img src="../img/marketing-1.svg" alt="">
             </div>
@@ -73,38 +73,38 @@
             </div>
         </section>
         <!-- grid de plantillas -->
-        <section class="container-galeria">
-            <div class="plantilla-uno">
+        <section class="container-galeria scroll-element">
+            <div class="plantilla-uno scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Gaming</h3>
                 <p></p></a>
             </div>
-            <div class="plantilla-dos">
+            <div class="plantilla-dos scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Technology</h3>
                 <p></p></a>
             </div>
-            <div class="plantilla-tres">
+            <div class="plantilla-tres scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Travel</h3>
                 <p></p></a>
             </div>
-            <div class="plantilla-cuatro">
+            <div class="plantilla-cuatro scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Art</h3>
                 <p></p></a>
             </div>
-            <div class="plantilla-cinco">
+            <div class="plantilla-cinco scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Fashion</h3>
                 <p></p></a>
             </div>
-            <div class="plantilla-seis">
+            <div class="plantilla-seis scroll-element">
                 <a href="#">
                     <img src="../img/galeria-uno.jpg" alt="">
                 <h3>Motivation</h3>
@@ -115,8 +115,8 @@
     </section>
     <br>
     <br>
-    <footer>
-        <div class="informacion">
+    <footer class="scroll-element">
+        <div class="informacion scroll-element">
             <section>
                 <a href="#">Phone +11 4223-5315</a>
                 <a href="#">example@ds.com</a>
@@ -139,6 +139,9 @@
             </section>
         </div>
     </footer>
+
+
+    <script src="./creaTublog.js"></script>
 </body>
 
 </html>
