@@ -304,16 +304,28 @@ footer {
     text-decoration: none;
 }
 
-/* Transform reload */
+/* Transform  */
 .scroll-element {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: translateX(-140px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 
 .scroll-element.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(0);
+}
+
+/* Transform pagina inicial */
+.zoom-element {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.zoom-element.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* galeria */
