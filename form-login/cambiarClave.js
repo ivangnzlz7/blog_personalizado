@@ -1,4 +1,4 @@
-const formulario = document.querySelector('.form')
+const formulario = document.querySelector('#formulario2')
 
 window.addEventListener('load', () => {
     formulario.addEventListener('submit', cambiarPassword)
@@ -12,44 +12,26 @@ function cambiarPassword(e) {
     let newPass = document.querySelector('#new-password').value;
     let repeatPass = document.querySelector('#repeat-new-password').value;
 
-    const userLogin = JSON.parse(localStorage.getItem(user));
-
     
     if([user, newPass, repeatPass].includes("")){
         mostrarMensaje('Los campos son obligatorios', false);
         return;
     }
     
-    if(userLogin === null){
-        mostrarMensaje(`No existe el usuario ${user}`, false);
-        return;
-    }
-
-    if(user != userLogin.user){
-        mostrarMensaje('Usuario incorrecto', false);
-        return;
-    }
-
-    if(newPass != repeatPass){
-        mostrarMensaje('Los password no coinciden', false);
-        return;
-    }
-
-    
-    
-    let usuarioNuevo = {
-        user: user,
-        email: userLogin.email,
-        clave: newPass
-    }
-
-    localStorage.removeItem(userLogin);
-    
-    localStorage.setItem(user, JSON.stringify(usuarioNuevo));
-
-
-    mostrarMensaje('Modificacion del password exitosamente', true);
-
+    const formData = new FormData(formulario);
+        fetch('http://127.0.0.1:5000/admin/update', {
+            method: 'PUT',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            mostrarMensaje('Se actualizo el password correctamente', true)
+        })
+        .catch((error) => {
+            console.log(error);
+            mostrarMensaje('No se pudo actualizar el password, revise los datos ingresados', false)
+        })
 } 
 
 

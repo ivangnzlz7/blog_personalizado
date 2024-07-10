@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../img/mention-56.svg" type="image/icon">
+    <link rel="stylesheet" href="update.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#">Blog</a>
+        </div>
+        <div class="createBlog">
+            <a href="../deletePost/deletePost.html">Eliminar Post</a>
+            <a href="#">Modificar Post</a>
+            <a href="../confirmacion.html">Home</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <form action="#" id="form3" method="POST">
+            <section>
+                <h2 class="titulo">Actualizar Publicacion</h2>
+                <br>
+                <label for="tituloDB">Titulo del post a actualizar:</label>
+                <br>
+                <br>
+                <input type="text" name="tituloDB" id="tituloDB" placeholder="  Titulo">
+                <br>
+                <br>
+                <label for="titulo">Titulo del nuevo post:</label>
+                <br>
+                <br>
+                <input type="text" name="titulo" id="titulo" placeholder="  Titulo">
+                <br>
+                <br>
+                <label for="contenido">contenido del nuevo post:</label>
+                <br>
+                <br>
+                <textarea placeholder="Desea modificar el contenido?" name="contenido" id="contenido"></textarea>
+            </section>
+                <div>
+                    <button id="submit">Modificar</button>
+                </div>
+                <br>
+            </form>
+        </main>
+        <script src="update.js"></script>
+</body>
+</html>

@@ -75,33 +75,26 @@ function check(e){
     }
 
     // Guardar Su Informacion
-    let usuario = {
-        user: nombreUser,
-        email: email,
-        clave: password
-    }
-    
-    // Buscar Si Existe El Usuario
-    let usuarioExistente = JSON.parse(localStorage.getItem(nombreUser));
+    const formData = new FormData(formulario);
+        fetch('http://127.0.0.1:5000/admin/add', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
 
-    
-    // Si El Usuario No Existe
-    if(usuarioExistente === null){
-        //Crear Usuario
-        localStorage.setItem(nombreUser, JSON.stringify(usuario));
-        
-        aviso('Se Registro Exitosamente', true);
-        return;
-    }
+            console.log(data);
 
-    // Evitar Duplicas
-    if(usuarioExistente.user == usuario.user){
-        aviso('Ya existe ese usuario', false)
-        return;
-    }
-    
-
+            localStorage.setItem('usr', data);
+            aviso('Se registro correctamente', true)
+        })
+        .catch((error) => {
+            console.log(error);
+            aviso('algo fallo', false)
+        })
 }
+
+
 
 
 function aviso(mensaje, res) {

@@ -1,34 +1,41 @@
-const formulario = document.querySelector('.form');
+const formulario = document.querySelector('#formulario');
 
-function ingresar(){
+window.addEventListener('load', () => {
+    formulario.addEventListener('submit', check)
+})
+
+
+function check(e){
+    e.preventDefault()
+
     let user, pass;
     user = document.querySelector("#username").value;
     pass = document.querySelector("#pass").value;
-  
-    // Si Existe El Usuario
-    const userCreated = JSON.parse(localStorage.getItem(user));
-    
+
     if([user, pass].includes("")){
         mostrarMensaje('campos vacios', false);
         return;
     }
     
-    if(userCreated === null){
-        mostrarMensaje(`No se ha encontrado el usuario ${user}`, false);
-        return;
+        const formData = new FormData(formulario);
+        fetch('http://127.0.0.1:5000/admin/check', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            mostrarMensaje('Inicio de sesion exitosa', true)
+            setTimeout(() => {
+                window.location.href = "../admin/confirmacion.html"
+            }, 3000)
+        })
+        .catch((error) => {
+            console.log(error);
+            mostrarMensaje('No se pudo iniciar sesion, revise los datos ingresados', false)
+        })
     }
 
-    if(pass != userCreated.clave){
-        mostrarMensaje('La contraseña es invalida', false);
-        return;
-    }
-    
-    mostrarMensaje('Inicio de sesion exitosamente', true);
-    setTimeout(() => {
-        window.location.href = "../logeado/creaTublog.html"
-    }, 5000)
-
-}
 
 // Mostrar error
  function mostrarMensaje(mensaje, res) {
@@ -61,13 +68,6 @@ function ingresar(){
     }
 }
 
-
-/*
-let caracteres = {
-    nombreUsuario: /^[a-zA-Z0-9]{6,16}$/,
-    contrasenia: /^.{8,20}$/
-}
- */
 
 // Iconos, Mostrar/ocultar contraseña
 let contra = document.getElementById("pass"),
