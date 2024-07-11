@@ -10,7 +10,7 @@ function deletePost(e){
     e.preventDefault();
     if(confirm('¿Estas seguro que quieres eliminar?')){
         const formData = new FormData(form);
-        fetch(`http://127.0.0.1:5000/blog/user/${usr}/posts`, {
+        fetch(`https://ivan2001.pythonanywhere.com/blog/user/${usr}/posts`, {
             method: 'DELETE',
             body: formData
         })

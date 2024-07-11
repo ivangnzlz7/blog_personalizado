@@ -36,7 +36,7 @@ function enviarDatos() {
 }
  
 function mostrarDatos() {
-    const URL = `http://127.0.0.1:5000/blog/posts/${usr}`;
+    const URL = `https://ivan2001.pythonanywhere.com/blog/posts/${usr}`;
     fetch(URL)
     .then(response => response.json())
     .then(data => {
