@@ -10,7 +10,7 @@ function updatePost(e){
     const usr = localStorage.getItem('usr')
     if(confirm('¿Estas seguro de actualizar el post?')){
         const formData = new FormData(form);
-        fetch(`https://ivan2001.pythonanywhere.com/blog/post/update/${usr}`, {
+        fetch(`http://127.0.0.1:5000/blog/post/update/${usr}`, {
             method: 'PUT',
             body: formData
         })

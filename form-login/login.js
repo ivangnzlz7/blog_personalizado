@@ -18,7 +18,7 @@ function check(e){
     }
     
         const formData = new FormData(formulario);
-        fetch('https://ivan2001.pythonanywhere.com/admin/check', {
+        fetch('http://127.0.0.1:5000/admin/check', {
             method: 'POST',
             body: formData
         })
