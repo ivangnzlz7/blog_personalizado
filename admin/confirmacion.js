@@ -1,6 +1,4 @@
 const form = document.querySelector('#form');
-let titulo = document.querySelector('#titulo').value;
-let contenido = document.querySelector('#contenido').value;
 const img = document.querySelector('#cerrar')
 
 window.addEventListener('load',() => {
@@ -13,13 +11,14 @@ const usr = localStorage.getItem('usr')
 
 function posts(e){
     e.preventDefault();
-    if([titulo, contenido].includes('')) return alert('Campos vacios')
-
     enviarDatos()
 }
 
 
 function enviarDatos() {
+    const titulo = document.querySelector('#titulo').value;
+    const contenido = document.querySelector('#contenido').value;
+    if([titulo, contenido].includes('')) return alert('Campos vacios')
     const formData = new FormData(form)
     fetch(`http://127.0.0.1:5000/blog/newPost/${usr}`, {
         method: 'POST',
