@@ -6,8 +6,13 @@ window.addEventListener('load', () => {
 
 
 function deletePost(e){
-    const usr = localStorage.getItem('usr')
     e.preventDefault();
+
+    const usr = localStorage.getItem('usr');
+    const titulo = document.querySelector('#titulo').value;
+    if(titulo == " ") return alert('El campo esta vacio');
+
+
     if(confirm('¿Estas seguro que quieres eliminar?')){
         const formData = new FormData(form);
         fetch(`http://127.0.0.1:5000/blog/user/${usr}/posts`, {
@@ -15,7 +20,7 @@ function deletePost(e){
             body: formData
         })
         .then(response => response.json())
-        .then(data => {
+        .then(data => { 
             console.log(data);
             alert('El post ha sido eliminado exitosamente')
             setTimeout(() => {

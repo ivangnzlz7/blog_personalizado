@@ -8,6 +8,12 @@ window.addEventListener('load', () => {
 function updatePost(e){
     e.preventDefault()
     const usr = localStorage.getItem('usr')
+    const tituloDB = document.querySelector('#tituloDB').value;
+    const titulo = document.querySelector('#titulo').value;
+    const contenido = document.querySelector('#contenido').value;
+
+    if([tituloDB, titulo, contenido].includes(' ')) return alert('Campos vacios')
+
     if(confirm('¿Estas seguro de actualizar el post?')){
         const formData = new FormData(form);
         fetch(`http://127.0.0.1:5000/blog/post/update/${usr}`, {

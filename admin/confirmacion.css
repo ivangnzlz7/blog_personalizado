@@ -168,6 +168,7 @@ section label {
     margin: 30px auto;
     background-color: white;
     width: 320px;
+    min-height: 380px;
     border: 1px solid rgb(241, 241, 190);
     border-radius: 6px;
     box-shadow: 4px 4px 10px  rgba(201, 193, 193, 0.897), -4px -4px 10px  rgba(201, 193, 193, 0.897);
@@ -178,8 +179,16 @@ section label {
     color: rgb(90, 87, 87);
 }
 
-#cerrar {
-    float: right;
-    cursor: pointer;
+.posts p{
+    font-size: 1.2rem;
+    line-height: 28px;
+    color: rgb(70, 67, 67);
+    margin: 40px auto;
+    width: 260px;
 }
 
+.posts hr {
+    width: 300px;
+    height: 2px;
+    color:  rgb(90, 87, 87);
+}

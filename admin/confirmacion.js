@@ -7,12 +7,13 @@ window.addEventListener('load',() => {
     form.addEventListener('submit', posts)
 });
 
-window.addEventListener('DOMContentLoaded', mostrarDatos);
+window.addEventListener('DOMContentLoaded', mostrarDatos); 
 
 const usr = localStorage.getItem('usr')
 
 function posts(e){
     e.preventDefault();
+    if([titulo, contenido].includes(' ')) return alert('Campos vacios')
 
     enviarDatos()
 }
@@ -42,13 +43,18 @@ function mostrarDatos() {
     .then(data => {
         let body = document.querySelector('body');
 
+        
         for(let campo of data) {
             let post = document.createElement('div')
             post.classList.add('posts')
+            let actualizacion = campo.actualizacion;
+            let update = actualizacion.slice(5, 22)
 
             post.innerHTML = `
             <br>
             <h2>${campo.titulo}</h2>
+            <hr>
+            <small><i>${update}</i></small>
             <br>
             <p>${campo.contenido}</p>
             <br>
