@@ -25,6 +25,8 @@ function check(e){
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            localStorage.setItem('usr', data)
+
             mostrarMensaje('Inicio de sesion exitosa', true)
             setTimeout(() => {
                 window.location.href = "../admin/confirmacion.html"
