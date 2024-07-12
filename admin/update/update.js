@@ -12,7 +12,7 @@ function updatePost(e){
     const titulo = document.querySelector('#titulo').value;
     const contenido = document.querySelector('#contenido').value;
 
-    if([tituloDB, titulo, contenido].includes(' ')) return alert('Campos vacios')
+    if([tituloDB, titulo, contenido].includes('')) return alert('Campos vacios')
 
     if(confirm('¿Estas seguro de actualizar el post?')){
         const formData = new FormData(form);

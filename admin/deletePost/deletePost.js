@@ -10,7 +10,7 @@ function deletePost(e){
 
     const usr = localStorage.getItem('usr');
     const titulo = document.querySelector('#titulo').value;
-    if(titulo == " ") return alert('El campo esta vacio');
+    if(titulo == "") return alert('El campo esta vacio');
 
 
     if(confirm('¿Estas seguro que quieres eliminar?')){

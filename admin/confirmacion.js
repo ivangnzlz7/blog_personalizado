@@ -13,7 +13,7 @@ const usr = localStorage.getItem('usr')
 
 function posts(e){
     e.preventDefault();
-    if([titulo, contenido].includes(' ')) return alert('Campos vacios')
+    if([titulo, contenido].includes('')) return alert('Campos vacios')
 
     enviarDatos()
 }
