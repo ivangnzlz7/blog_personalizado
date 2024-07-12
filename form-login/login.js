@@ -1,3 +1,5 @@
+const { type } = require("express/lib/response");
+
 const formulario = document.querySelector('#formulario');
 
 window.addEventListener('load', () => {
@@ -24,8 +26,8 @@ function check(e){
         })
         .then(response => response.json())
         .then(data => {
+
             console.log(data);
-            localStorage.setItem('usr', data)
 
             mostrarMensaje('Inicio de sesion exitosa', true)
             setTimeout(() => {
