@@ -20,7 +20,7 @@ function enviarDatos() {
     const contenido = document.querySelector('#contenido').value;
     if([titulo, contenido].includes('')) return alert('Campos vacios')
     const formData = new FormData(form)
-    fetch(`http://127.0.0.1:5000/blog/newPost/${usr}`, {
+    fetch(`https://ivan2001.pythonanywhere.com/blog/newPost/${usr}`, {
         method: 'POST',
         body: formData 
     })
@@ -36,7 +36,7 @@ function enviarDatos() {
 }
  
 function mostrarDatos() {
-    const URL = `http://127.0.0.1:5000/blog/posts/${usr}`;
+    const URL = `https://ivan2001.pythonanywhere.com/blog/posts/${usr}`;
     fetch(URL)
     .then(response => response.json())
     .then(data => {
