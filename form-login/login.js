@@ -22,12 +22,18 @@ function check(e){
             method: 'POST',
             body: formData
         })
-        .then(response => response.json())
+        .then(response => response.json()) 
         .then(data => {
-
             console.log(data);
 
+            if(data == false){
+                mostrarMensaje(`No se encontro el usuario ${user}`, false)
+                return;
+            }
+
+            localStorage.setItem('usr', data)
             mostrarMensaje('Inicio de sesion exitosa', true)
+
             setTimeout(() => {
                 window.location.href = "../admin/confirmacion.html"
             }, 3000)

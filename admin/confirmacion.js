@@ -37,7 +37,7 @@ function enviarDatos() {
  
 function mostrarDatos() {
     const URL = `https://ivan2001.pythonanywhere.com/blog/posts/${usr}`;
-    fetch(URL)
+    fetch(URL)  
     .then(response => response.json())
     .then(data => {
         let body = document.querySelector('body');

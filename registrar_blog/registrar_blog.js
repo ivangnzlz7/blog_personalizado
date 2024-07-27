@@ -83,7 +83,6 @@ function check(e){
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            localStorage.setItem('usr', data)
             aviso('Se registro correctamente', true)
         })
         .catch((error) => {
