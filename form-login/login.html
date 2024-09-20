@@ -19,61 +19,35 @@
             <a href="#">Iniciar Sesion</a>
             <a href="../registrar_blog/registrar_blog.html">Registrarse</a>
         </div>
-    </header>                                                          
-      <div class="login-container">
-        
-        <form action="#" class="form" id="formulario">
-            <h2>Iniciar sesión</h2>
-
-            <div class="nombre-usuario form-error">
-                <label for="username">Nombre de usuario</label>
-                 <input type="text" class="campos" id="username" name="usuario" placeholder="Nombre de usuario" maxlength="16" required>
-            </div>
-                
-            <div class="contrasenia form-succes">
-                <label for="pass">Contraseña</label>
-                <input type="password" class="campos" id="pass" name="password" placeholder="Contraseña" minlength="4" maxlength="100" required>
-                <i class="bx bx-hide"></i>
-            </div>
-            
-            <div class="check">
-                <label for="recordar">Recordar contraseña</label>
-                <input type="checkbox" id="recordar">
-            </div>
-              
-            <div class="div-boton">
-                <input class="boton" type="submit" id="boton" value="Iniciar">
-            </div>
-
-            <a class="recuperar-contra" href="cambiar-contra.html">¿Olvidó su contraseña?</a>
+    </header>                                                       
+    <main class="main">
+        <form action="#" id="form" method="post">
+            <section> 
+                <label for="usuario">Nombre de Usuario:</label>
+                <br>
+                <br>
+                <input type="text" name="usuario" id="usuario" placeholder="    Usuario">
+            </section>
+            <section>
+                <label for="password">Password:</label>
+                <br>
+                <br>
+                <input type="password" name="password" id="password" placeholder="    Password">
+            </section>
+            <section>
+                <div>
+                    <button id="submit">Iniciar sesion</button>
+                </div>
+                <div>
+                    <a href="cambiar-contra.html" id="password">¿Olvido la contraseña?</a>
+                </div>
+            </section>
         </form>
-    </div>
-    
-    
-    <footer>
-        <div class="informacion">
-            <section>
-                <a href="#">Phone +11 4223-5315</a>
-                <a href="#">example@ds.com</a>
-            </section>
-            <section>
-                <a href="#">About</a>
-                <a href="#">jobs</a>
-                <a href="#">Press</a>
-                <a href="#">blog</a>
-            </section>
-            <section>
-                <a href="#">Contact Us</a>
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-            </section>
-            <section>
-                <a href="#">Facebook</a>
-                <a href="#">twitter</a>
-                <a href="#">instagram</a>
-            </section>
-        </div>
-    </footer>
+        <section class="login">
+            <h1>Inicie sesion y comparta sus gustos al <span>mundo</span></h1>
+        </section>
+    </main>
+    <span class="messege"></span>   
     <script src="login.js"></script>
 </body>
 </html>

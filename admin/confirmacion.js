@@ -1,5 +1,7 @@
 const form = document.querySelector('#form');
-const img = document.querySelector('#cerrar')
+const img = document.querySelector('#cerrar');
+const post = document.querySelectorAll('.posts img');
+
 
 window.addEventListener('load',() => {
     form.addEventListener('submit', posts)
@@ -8,6 +10,7 @@ window.addEventListener('load',() => {
 window.addEventListener('DOMContentLoaded', mostrarDatos); 
 
 const usr = localStorage.getItem('usr')
+
 
 function posts(e){
     e.preventDefault();
@@ -20,7 +23,7 @@ function enviarDatos() {
     const contenido = document.querySelector('#contenido').value;
     if([titulo, contenido].includes('')) return alert('Campos vacios')
     const formData = new FormData(form)
-    fetch(`https://ivan2001.pythonanywhere.com/blog/newPost/${usr}`, {
+    fetch(`http://127.0.0.1:5000/blog/newPost/${usr}`, {
         method: 'POST',
         body: formData 
     })
@@ -36,11 +39,12 @@ function enviarDatos() {
 }
  
 function mostrarDatos() {
-    const URL = `https://ivan2001.pythonanywhere.com/blog/posts/${usr}`;
+    const URL = `http://127.0.0.1:5000/blog/posts/${usr}`;
     fetch(URL)  
     .then(response => response.json())
     .then(data => {
         let body = document.querySelector('body');
+        console.log(data);
 
         
         for(let campo of data) {
@@ -50,6 +54,7 @@ function mostrarDatos() {
             let update = actualizacion.slice(5, 22)
 
             post.innerHTML = `
+            <img src="../img/cerrar.svg" alt="${campo.titulo}" id="$">
             <br>
             <h2>${campo.titulo}</h2>
             <hr>

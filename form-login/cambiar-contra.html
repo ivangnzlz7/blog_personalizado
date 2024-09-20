@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="password.css">
     <link rel="icon" href="../img/mention-56.svg" type="image/icon">
-    <title>Cambiar contraseña</title>
+    <title>Cambiar Password</title>
 </head>
 <body>
     <header>
@@ -19,58 +19,38 @@
             <a href="../registrar_blog/registrar_blog.html">Registrarse</a>
         </div>
     </header>                                                          
-      <div class="login-container">
-        
-        <form action="#" class="form" id="formulario2">
-            <h2>Cambiar contraseña</h2>
-
-            <div class="nombre-usuario">
-                <label for="email">Usuario</label>
-                 <input type="text" class="campos" id="email" name="usuario" placeholder="Ingrese su usuario">
-            </div>
-            
-            <div class="contrasenia">
-                <label for="new-password">Nueva contraseña</label>
-                <input type="password" class="campos" id="new-password" name="password" placeholder="Contraseña" minlength="8" maxlength="20">
-            </div>
-            
-            <div class="contrasenia">
-                <label for="repeat-new-password">Repita la nueva contraseña</label>
-                <input type="password" class="campos" id="repeat-new-password" name="contra" placeholder="Contraseña" minlength="8" maxlength="20">
-            </div>
-
-            <div class="div-boton">
-                <input class="boton" type="submit" value="Cambiar contraseña" >
-            </div>
-
+    <main class="main">
+        <form action="#" id="form" method="post">
+            <section> 
+                <label for="usuario">Usuario:</label>
+                <br>
+                <br>
+                <input type="text" name="usuario" id="usuario" placeholder="    Ingrese usuario">
+            </section>
+            <section>
+                <label for="password">Nuevo Password:</label>
+                <br>
+                <br>
+                <input type="password" name="password" id="password" placeholder="    Password">
+            </section>
+            <section>
+                <label for="repeat-password">Repetir Password:</label>
+                <br>
+                <br>
+                <input type="password" name="password" id="repeat-password" placeholder="    Password">
+            </section>
+            <section>
+                <div>
+                    <button id="submit">Modificar</button>
+                </div>
+            </section>
         </form>
-    </div>
+        <section class="perfil">
+            <h1>Recupere su clave y no pierda su <span>cuenta</span></h1>
+        </section>
+        <span class="messege2"></span> 
+    </main>
     
-    
-    <footer>
-        <div class="informacion">
-            <section>
-                <a href="#">Phone +11 4223-5315</a>
-                <a href="#">example@ds.com</a>
-            </section>
-            <section>
-                <a href="#">About</a>
-                <a href="#">jobs</a>
-                <a href="#">Press</a>
-                <a href="#">blog</a>
-            </section>
-            <section>
-                <a href="#">Contact Us</a>
-                <a href="#">Terms</a>
-                <a href="#">Privacy</a>
-            </section>
-            <section>
-                <a href="#">Facebook</a>
-                <a href="#">twitter</a>
-                <a href="#">instagram</a>
-            </section>
-        </div>
-    </footer>
     <script src="cambiarClave.js"></script>
 </body>
 </html>

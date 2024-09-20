@@ -12,11 +12,12 @@ function updatePost(e){
     const titulo = document.querySelector('#titulo').value;
     const contenido = document.querySelector('#contenido').value;
 
-    if([tituloDB, titulo, contenido].includes('')) return alert('Campos vacios')
+    if([tituloDB].includes('')) return alert('el titulo del post a actualziar esta vacio.')
+    if(titulo == '' && contenido == '' ) return alert('no se coloco ningun cambio.')
 
     if(confirm('¿Estas seguro de actualizar el post?')){
         const formData = new FormData(form);
-        fetch(`https://ivan2001.pythonanywhere.com/blog/post/update/${usr}`, {
+        fetch(`http://127.0.0.1:5000/blog/post/update/${usr}`, {
             method: 'PUT',
             body: formData
         })

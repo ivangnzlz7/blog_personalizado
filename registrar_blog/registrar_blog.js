@@ -16,7 +16,6 @@ function check(e){
     e.preventDefault();
     
     const nombreUser = document.querySelector('#usuario').value;
-    const tematica = document.querySelector('#temablog').value;
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
     const repassword = document.querySelector('#repassword').value;
@@ -24,8 +23,8 @@ function check(e){
     let matchm2 = email.match(/@/gi);
 
     // Validar Campos
-    if([nombreUser, tematica, email, password, repassword].includes("")){
-        let inputs = [nom, tema, ema, pass, repass]
+    if([nombreUser, email, password, repassword].includes("")){
+        let inputs = [nom, ema, pass, repass]
 
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].classList.add('errorEnCampos')
@@ -33,7 +32,7 @@ function check(e){
         aviso('Completar todos los campos', false);
         return;
     } else {
-        let inputs = [nom, tema, ema, pass, repass]
+        let inputs = [nom, ema, pass, repass]
 
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].classList.remove('errorEnCampos');
@@ -76,7 +75,7 @@ function check(e){
 
     // Guardar Su Informacion
     const formData = new FormData(formulario);
-        fetch('https://ivan2001.pythonanywhere.com/admin/add', {
+        fetch('http://127.0.0.1:5000/admin/add', {
             method: 'POST',
             body: formData
         })

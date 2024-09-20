@@ -1,4 +1,5 @@
-const formulario = document.querySelector('#formulario');
+const formulario = document.querySelector('#form');
+const messege = document.querySelector('.messege');
 
 window.addEventListener('load', () => {
     formulario.addEventListener('submit', check)
@@ -9,16 +10,17 @@ function check(e){
     e.preventDefault()
 
     let user, pass;
-    user = document.querySelector("#username").value;
-    pass = document.querySelector("#pass").value;
+    user = document.querySelector("#usuario").value;
+    pass = document.querySelector("#password").value;
 
     if([user, pass].includes("")){
+        limpiarRes();
         mostrarMensaje('campos vacios', false);
         return;
     }
     
         const formData = new FormData(formulario);
-        fetch('https://ivan2001.pythonanywhere.com/admin/check', {
+        fetch('http://127.0.0.1:5000/admin/check', {
             method: 'POST',
             body: formData
         })
@@ -27,6 +29,7 @@ function check(e){
             console.log(data);
 
             if(data == false){
+                limpiarRes();
                 mostrarMensaje(`No se encontro el usuario ${user}`, false)
                 return;
             }
@@ -53,45 +56,32 @@ function check(e){
         // Crear una alerta
         const alerta = document.createElement('div');
         alerta.classList.add('.mensaje');
-         if(res === true){
+        if(res === true){
             alerta.innerHTML = `
-            <p style="text-align: center; font-size: 14px; color: blue;">${mensaje}</p>
+            <p style="text-align: center; font-size: 26px; color: blue;">${mensaje}</p>
             `
-            formulario.appendChild(alerta);
+            messege.appendChild(alerta);
     
             setTimeout(() => {
                 alerta.remove();
             }, 4000);
-         }  else {
+            return;
+        }  
             alerta.innerHTML = `
-            <p style="text-align: center; font-size: 14px; color: red;">${mensaje}</p>
+            <p style="font-size: 26px; color: red; padding-left: 262px;">${mensaje}</p>
             `
-            formulario.appendChild(alerta);
+            messege.appendChild(alerta);
     
             setTimeout(() => {
                 alerta.remove();
             }, 4000);
-         }
-
     }
 }
 
-
-// Iconos, Mostrar/ocultar contraseña
-let contra = document.getElementById("pass"),
-      icono = document.querySelector(".bx");
-
-icono.addEventListener("click", (e) => {
-    if (pass.type === "password"){
-         pass.type = "text";
-         icono.classList.remove("bx-hide")
-         icono.classList.add("bx-show-alt")
-    }else{
-        pass.type = "password"
-        icono.classList.add("bx-hide")
-        icono.classList.remove("bx-show-alt")
+function limpiarRes(){
+    while(messege.firstChild){
+       messege.removeChild(messege.firstChild)
     }
-})
-
+}
 
 
