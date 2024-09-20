@@ -75,7 +75,7 @@ function check(e){
 
     // Guardar Su Informacion
     const formData = new FormData(formulario);
-        fetch('http://127.0.0.1:5000/admin/add', {
+        fetch('https://ivan2001.pythonanywhere.com/admin/add', {
             method: 'POST',
             body: formData
         })
